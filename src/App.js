@@ -1,15 +1,14 @@
 import "./App.css";
-import EricCardCase from "./EricCardCase";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./Routes";
 
+/**@return {jsx} The top level in the application */
 function App() {
   return (
     <div className="App">
-      <EricCardCase />
-      <input type="checkbox" id="toggle" class="toggle--checkbox" />
-      <label for="toggle" class="toggle--label">
-        <span class="toggle--label-background"></span>
-      </label>
-      <div class="background"></div>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </div>
   );
 }
